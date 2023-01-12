@@ -18,6 +18,26 @@ namespace Adventures.Controllers
             return View();
         }
 
+        public IActionResult Booking()
+        {
+            return View();
+        }
+        public IActionResult Gallery()
+        {
+            return View();
+        }
+        public IActionResult Video()
+        {
+            return View();
+        }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+        public IActionResult Contacts()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
