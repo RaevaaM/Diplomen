@@ -2,19 +2,34 @@
     ViewData["Title"] = "Начало";
 }
 <style>
-    
-    p{
+    /*body{
+       background-image:url('/wwwroot/photos/background-home.jfif');
+       background-size:100% 100%;
+       margin:0;
+    }*/
+   /* p{
         color:dimgrey;
         font-size:25px;
-    }
+    }*/
 </style>
-<body>
+<body style="background-image:url('@Url.Content("/wwwroot/photos/background-home.jfif")')">
 <div class="text-center">
-    <h1 class="display-4">Добре дошли в Adventum</h1>
-    <p>
-        "Понякога ми потичат сълзи от очите, от страх. Фокус и концентрация, това е рецепта. Страхът е предизвикателство. 
-        Трябва да го преодолееш и ако успееш, ставаш по-добър."
-        - Сани Жекова
+        <h1 class="display-4">Добре дошли в <span>Adventum</span></h1>
+    <p id="quote">
+        "Любимото ми нещо е да отида някъде, където никога не съм била!"
+        - Даян Арбус
     </p>
+
+    <div id="firstDiv">
+      <div id="textDiv">
+        <p id="text">
+        Е, ако и Вие искате да отидете някъде, където никога не сте били, то Adventum ще се погрижи да Ви заведе
+        на места, които никога няма да забравите. С нас ще преживеете уникални моменти, ще преминете през стотици емоции
+        и ще искате да повторите многократно нашите екстремни преживявания.
+       </p>
+      </div>
+            <img src="~/photos/background-home.jfif" />
     </div>
+    
+</div>
 </body>

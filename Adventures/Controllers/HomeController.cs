@@ -1,5 +1,7 @@
 ﻿using Adventures.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 using System.Diagnostics;
 
 namespace Adventures.Controllers
@@ -7,10 +9,12 @@ namespace Adventures.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ItemContext _context = new ItemContext();
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, DbSet<ItemContext> context)
         {
             _logger = logger;
+            //_context = context;
         }
 
         public IActionResult Index()
@@ -43,6 +47,50 @@ namespace Adventures.Controllers
             return View();
         }
 
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    //var item = await _context.Items
+        //    //    .Include(i => i.Name)
+        //    //        .Include(e=>e.CreatedOn)
+        //    //    .AsNoTracking()
+        //    //    .FirstOrDefaultAsync(m => m.Id == id);
+
+        //    if (item == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return View(item);
+        //}
+
+    //    [HttpPost]
+    //    [ValidateAntiForgeryToken]
+    //    public async Task<IActionResult> Create(
+    //[Bind("CreatedOn,Description,Name")] Item item)
+    //    {
+    //        try
+    //        {
+    //            if (ModelState.IsValid)
+    //            {
+    //                _context.Add(item);
+    //                await _context.SaveChangesAsync();
+    //                return RedirectToAction(nameof(Index));
+    //            }
+    //        }
+    //        catch (DbUpdateException /* ex */)
+    //        {
+    //            //Log the error (uncomment ex variable name and write a log.
+    //            ModelState.AddModelError("", "Unable to save changes. " +
+    //                "Try again, and if the problem persists " +
+    //                "see your system administrator.");
+    //        }
+    //        return View(item);
+    //    }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
