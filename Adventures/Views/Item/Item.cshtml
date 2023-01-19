@@ -5,11 +5,12 @@
 }
 
 <h1>Items</h1>
+
 <ul>
-    @foreach (var t:Item in Model)
+    @foreach (var t in Model)
     {
         <li>
-            <div>@t.Model</div>
+            <div>@t.ItemType</div>
             <div>@t.Description</div>
             <div>@t.CreatedOn</div>
         </li>

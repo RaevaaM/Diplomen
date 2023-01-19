@@ -10,7 +10,7 @@ namespace Adventures.Controllers
             List<Item> items = new List<Item>()
             {
                 new Item() {ItemId=1, ItemType="something", Description="hdfn"},
- new Item() {ItemId=1, ItemType="something", Description="hdfn"}
+                new Item() {ItemId=2, ItemType="something", Description="hdfn"}
             };
             return View(items);
         }
