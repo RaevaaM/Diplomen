@@ -1,0 +1,17 @@
+﻿@model IList<Item>
+@{
+    ViewData["Title"] = "Item";
+    Layout = "_Layout";
+}
+
+<h1>Items</h1>
+<ul>
+    @foreach (var t:Item in Model)
+    {
+        <li>
+            <div>@t.Model</div>
+            <div>@t.Description</div>
+            <div>@t.CreatedOn</div>
+        </li>
+    }
+</ul>

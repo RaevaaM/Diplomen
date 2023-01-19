@@ -9,9 +9,9 @@ namespace Adventures.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ItemContext _context = new ItemContext();
+        //private readonly ItemContext _context = new ItemContext();
 
-        public HomeController(ILogger<HomeController> logger, DbSet<ItemContext> context)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
             //_context = context;
