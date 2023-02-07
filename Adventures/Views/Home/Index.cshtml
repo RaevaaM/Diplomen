@@ -1,39 +1,183 @@
 ﻿@{
     ViewData["Title"] = "Начало";
 }
-<style>
-    /*body{
-           background-image:url('/wwwroot/photos/background-home.jfif');
-           background-size:100% 100%;
-           margin:0;
-        }*/
-    /* p{
-            color:dimgrey;
-            font-size:25px;
-        }*/
-</style>
-<body style="background-image:url('@Url.Content("/wwwroot/photos/background-home.jfif")')">
-    <div class="text-center">
-        <h1 class="display-4">Добре дошли в <span>Adventum</span></h1>
-        <p id="quote">
-            "Любимото ми нещо е да отида някъде, където никога не съм била!"
-            - Даян Арбус
-        </p>
-        
-        <div id="Div">
-            <div id="firstDiv">
-                <div id="textDiv">
-                    <p id="text">
-                        Е, ако и Вие искате да отидете някъде, където никога не сте били, то Adventum ще се погрижи да Ви заведе
-                        на места, които никога няма да забравите. С нас ще преживеете уникални моменти, ще преминете през стотици емоции
-                        и ще искате да повторите многократно нашите екстремни преживявания.
-                    </p>
-                </div>
-                <img src="~/photos/background-home.jfif" id="photo1" />
-            </div>
-            </div>
-        
-        <br />
-    </div>
+<body>
+    <section id="welcomeIMG">
+        <img src="~/photos/homeGIF.gif" id="homeGIF" class="img-fluid" />
+    </section>
     
+    @*<div class="container">
+        <div class="info-images">
+            <div class="image" id="bungee">
+                <p class="h">БЪНДЖИ СКОК</p>
+            </div>
+            <div class="image" id="balloon">
+                <p class="h">БАЛОН С ГОРЕЩ ВЪЗДУХ</p>
+            </div>
+            <div class="image" id="paragliding">
+                <p class="h">ПАРАПЛАНЕРИЗЪМ</p>
+            </div>
+            <div class="image" id="skydiving">
+                <p class="h">СКОК ОТ САМОЛЕТ</p>
+            </div>
+            <div class="image" id="rock">
+                <p class="h">ПЛАНИНСКО КАТЕРЕНЕ</p>
+            </div>
+            <div class="image" id="atv">
+                <p class="h">РАЗХОДКА С АТВ</p>
+            </div>
+            <div class="image" id="rafting">
+                <p class="h">РАФТИНГ</p>
+            </div>
+            <div class="image" id="snow">
+                <p class="h">СКИ, МОТОРНА ШЕЙНА, СНОУБОРД</p>
+            </div>
+        </div>
+        <br />
+        <div class="contacts container-fluid bg-grey">
+            <h2 class="text-center">Контакти</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p id="contacts-text">Ще се свържем с Вас в следващите 24ч.</p>
+                    <p id="con-place"><span class="con-icons"><i class="bi bi-geo-alt"></i></span><span class="con-line">София, България</span></p>
+                    <p id="con-phone"><span class="con-icons"><i class="bi bi-telephone"></i></span><span class="con-line"> +359 123 123 123</span></p>
+                    <p id="con-mail"><span class="con-icons"><i class="bi bi-envelope"></i></span><span class="con-line" id="email-text"> adventum@gmail.com</span></p>
+                </div>
+                <div class="col-sm-7">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <br />
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-outline-secondary" type="submit" id="send">Изпрати съобщение...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+   
+    <div class="sports">
+        
+        <div class="item snow">
+            @*<img class="imgSport" src="~/photos/snow.jfif"/>*@
+                <div class="overlay">
+                    <p class="sport-text">СКИ, СНОУБОРД, МОТОРНА ШЕЙНА</p>
+                </div>
+        </div>
+        <div class="item ATV">
+                @*<img class="imgSport"  src="~/photos/ATV.jfif" />*@
+                <div class="overlay">
+                    <p class="sport-text">ATV РАЗХОДКА</p>
+                </div>
+        </div>
+        <div class=" item rafting">
+                @*<img class="imgSport" src="~/photos/rafting.jpg" />*@
+                <div class="overlay">
+                    <p class="sport-text">РАФТИНГ</p>
+                </div>
+        </div>
+        <div class=" item rock">
+                @*<img class="imgSport" src="~/photos/rock.jfif" />*@
+                <div class="overlay">
+                    <p class="sport-text">СКАЛНО КАТЕРЕНЕ</p>
+                </div>
+        </div>
+         <div class="item bungee">
+                @*<img class="imgSport" src="~/photos/bungee.jfif" />*@
+                <div class="overlay">
+                <p class="sport-text">БЪНДЖИ СКОК</p></div>
+        </div>
+         <div class="item balloon">
+               @* <img class="imgSport" src="~/photos/balloon.jpg" />*@
+                <div class="overlay">
+                    <p class="sport-text">ПОЛЕТ/СКОК ОТ БАЛОН</p>
+                </div>
+         </div>
+         <div class="item paragliding">
+                @*<img class="imgSport" src="~/photos/paragliding.jpg" />*@
+                <div class="overlay">
+                    <p class="sport-text">ПОЛЕТ С ПАРАПЛАНЕР</p>
+                </div>
+         </div>
+        <div class="item skydive">
+                @*<img class="imgSport" src="~/photos/skydiving.jfif"/>*@
+                <div class="overlay">
+                    <p class="sport-text">СКОК ОТ САМОЛЕТ</p>
+                </div>
+        </div>
+    </div>
+   
+    <section class="contacts container-fluid bg-grey">
+        <div class=content>
+            <h2>Контакти</h2>
+            <p>Ще се радваме, ако имате някакви идеи или въпроси да се обърнете към нас.
+                Отговаряме в рамките на 24ч.
+            </p>
+        </div>
+        <div class="container">
+            <div class="contact-info">
+                <div class="box">
+                    <div class="icon">
+                        <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Адрес</h3>
+                        <p>
+                           бул."3-ти март" №140, <br /> София, България
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="bi bi-telephone" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Телефон</h3>
+                        <p>
+                            +359 123 123 123
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="bi bi-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>
+                            adventum@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <h2>Изпрати съобщение</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required/>
+                        <span class="form-text">Имена</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required/>
+                        <span class="form-text">Имейл</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required />
+                        <span class="form-text">Напишете Вашето съобщение...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
