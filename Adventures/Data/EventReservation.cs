@@ -1,6 +1,6 @@
 ﻿namespace Adventures.Data
 {
-    public class EventReservations
+    public class EventReservation
     {
         public int Id { get; set; }
         public int EventId { get; set; }
