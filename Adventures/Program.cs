@@ -1,3 +1,7 @@
+using Adventures.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace Adventures
 {
     public class Program
@@ -5,7 +9,22 @@ namespace Adventures
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Build();
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
+                throw new InvalidOperationException(
+                    "Connection string 'DefaultConnection' not found.");
+
+            builder.Services.AddDbContext<AdventureContext>(options =>
+               options.UseSqlite(connectionString));
+
+            builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+               .AddRoles<IdentityRole>()
+               .AddEntityFrameworkStores<AdventureContext>()
+               .AddDefaultTokenProviders();
+
+            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+            builder.Services.AddControllers(options
+               => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
@@ -25,6 +44,10 @@ namespace Adventures
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.MapControllerRoute(
+                name: "Account",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
             app.MapControllerRoute(
                 name: "default",
