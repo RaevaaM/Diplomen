@@ -5,7 +5,7 @@ namespace Adventures
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            builder.Build();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
