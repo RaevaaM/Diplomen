@@ -9,14 +9,14 @@ namespace Adventures
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
+            var connectionString = builder.Configuration.GetConnectionString("LocalDatabase") ??
                 throw new InvalidOperationException(
                     "Connection string 'DefaultConnection' not found.");
 
             builder.Services.AddDbContext<AdventureContext>(options =>
                options.UseSqlite(connectionString));
 
-            builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
+            builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = false)
                .AddRoles<IdentityRole>()
                .AddEntityFrameworkStores<AdventureContext>()
                .AddDefaultTokenProviders();

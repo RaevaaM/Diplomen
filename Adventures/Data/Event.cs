@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.CodeAnalysis;
 
 namespace Adventures.Data
 {
@@ -7,11 +8,17 @@ namespace Adventures.Data
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        
+        [ForeignKey(nameof(SportActivity))]
         public int SportActivityId { get; set; }
-        public SportActivity SportsActivities { get; set; }
 
+        
+        [ForeignKey(nameof(Location))]
         public int LocationId { get; set; }
-        public Location Locations { get; set; }
+        
+        public virtual SportActivity SportActivity { get; set; }
+        public virtual Location Location { get; set; }
+        
         public ICollection<EventReservation> EventReservations { get; set; }
     }
 }

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Adventures.Data;
 
@@ -22,7 +18,10 @@ namespace Adventures.Controllers
         // GET: Events
         public async Task<IActionResult> Index()
         {
-            var adventureContext = _context.Events.Include(@ => @.Locations).Include(@ => @.SportsActivities);
+            var adventureContext = _context.Events
+                .Include(e => e.Location)
+                .Include(e => e.SportActivity);
+
             return View(await adventureContext.ToListAsync());
         }
 
@@ -34,16 +33,16 @@ namespace Adventures.Controllers
                 return NotFound();
             }
 
-            var @event = await _context.Events
-                .Include(@ => @.Locations)
-                .Include(@ => @.SportsActivities)
+            var evt = await _context.Events
+                .Include(e => e.Location)
+                .Include(e => e.SportActivity)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (@event == null)
+            if (evt == null)
             {
                 return NotFound();
             }
 
-            return View(@event);
+            return View(evt);
         }
 
         // GET: Events/Create
@@ -135,16 +134,13 @@ namespace Adventures.Controllers
                 return NotFound();
             }
 
-            var @event = await _context.Events
-                .Include(@ => @.Locations)
-                .Include(@ => @.SportsActivities)
+            var evt = await _context.Events
+                .Include(e => e.Location)
+                .Include(e => e.SportActivity)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (@event == null)
-            {
-                return NotFound();
-            }
-
-            return View(@event);
+            
+            
+            return evt == null ? NotFound() : View(evt);
         }
 
         // POST: Events/Delete/5
