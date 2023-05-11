@@ -12,5 +12,62 @@
     <link rel="stylesheet" href="~/Adventures.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <h1 class="heading">Галерия</h1>
+@*
+    <input type="radio" id="all" name="radioBtn" checked/>
+    <input type="radio" id="air" name="radioBtn" />
+    <input type="radio" id="jump" name="radioBtn" />
+    <input type="radio" id="snowing" name="radioBtn"/>
+    <input type="radio" id="water" name="radioBtn" />
+    <input type="radio" id="climb" name="radioBtn" />
+    <input type="radio" id="atv" name="radioBtn" />
+
+    <label for="all" class="tag all">Всички</label>
+    <label for="air" class="tag air">Въздушни</label>
+    <label for="jump" class="tag jump">Бънджи</label>
+    <label for="snowing" class="tag snowing">Снежни</label>
+    <label for="water" class="tag water">Водни</label>
+    <label for="climb" class="tag climb">Катерене</label>
+    <label for="atv" class="tag atv">АТВ</label>*@
+
+    <section class="container">
+        <ul class="gallery">
+            <li class="filter active" data-filter="all">Всички</li>
+            <li class="filter" data-filter="air">Въздушни</li>
+            <li class="filter" data-filter="jump">Бънджи</li>
+            <li class="filter" data-filter="snowing">Снежни</li>
+            <li class="filter" data-filter="water">Рафтинг</li>
+            <li class="filter" data-filter="climb">Катерене</li>
+            <li class="filter" data-filter="atv">АТВ</li>
+        </ul>
+        
+        <div class="images">
+            <div class="itembox jump">
+                <img src="~/photos/bungee1.jfif" data-item="jump" alt="" />
+            </div>
+            <div class="itembox atv">
+                <img src="~/photos/atv5.png" data-item="atv" />
+            </div>
+            <div class="itembox air"><img src="~/photos/skydive3.png" data-item="air" alt=""/></div>
+            <div class="itembox jump"><img src="~/photos/bungee10.png" data-item="jump" alt="" /></div>
+            <div class="itembox snowing"><img src="~/photos/snow5.jfif" data-item="snowing" alt=""/></div>
+            <div class="itembox water">
+                <img src="~/photos/rafting5.jfif" data-item="water" alt=""/>
+            </div>
+            <div class="itembox atv"><img src="~/photos/atv2.jfif" data-item="atv" alt="" /></div>
+            <div class="itembox climb"><img src="~/photos/rock10.jfif" data-item="climb" alt=""/></div>
+            <div class="itembox air"><img src="~/photos/balloon.jfif" data-item="air" alt=""/></div>
+            <div class="itembox air"><img src="~/photos/para1.jfif" data-item="air" alt=""/></div>
+            <div class="itembox water"><img src="~/photos/rafting4.jfif" data-item="water" alt=""/></div>
+            <div class="itembox snowing"><img src="~/photos/snow4.jfif" data-item="snowing" alt=""/></div>
+            <div class="itembox climb"><img src="~/photos/rock4.jfif" data-item="climb" alt=""/></div>
+            <div class="itembox atv"><img src="~/photos/atv7.png" data-item="atv" alt=""/></div>
+            <div class="itembox snowing"><img src="~/photos/snow10.jfif" data-item="snowing" alt=""/></div>
+            <div class="itembox water"><img src="~/photos/rafting.jfif" data-item="water" alt=""/></div>
+            <div class="itembox jump"> <img src="~/photos/bungee2.jfif" data-item="jump" alt=""/></div>
+            <div class="itembox climb"> <img src="~/photos/rock1.jfif" data-item="climb" alt=""/></div>
+        </div>
+    </section>
+    <script type="module" src="/js/gallery.js"></script>
 </body>
 </html>

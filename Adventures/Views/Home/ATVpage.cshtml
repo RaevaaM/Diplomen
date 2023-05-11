@@ -1,0 +1,300 @@
+﻿@{
+    ViewData["Title"] = "ATV разходка";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/ATVpage.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/Adventures.styles.css" asp-append-version="true" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+</head>
+<body>
+    @*<section>
+    <div class="container">
+    <div class="content-section">
+    <div class="title">
+    <h1>ATV разходка</h1>
+    </div>
+    <div class="content">
+    <h3>Офроуд приключения с АТВ под наем за начинаещи и напреднали!</h3>
+    <p>
+    Бясна скорост + вятър в лицето + адреналин в кръвта = незабравимо офроуд приключение с АТВ!
+    Отдай се на екстремните преживявания, свежия въздух и красивите гледки.
+    При нас безопасността е на първо място!
+    </p>
+    </div>
+    <div class="button">
+    <a href="">ВИЖ ПОВЕЧЕ</a>
+    </div>
+    </div>
+    <div class="image-section">
+    <img src="~/photos/atv10.jfif"/>
+    </div>
+    </div>
+    </section>*@
+
+    <div id="container">
+        <div id="image">
+            <img src="~/photos/result.png" />
+        </div>
+        <div class="content">
+            <h2>АДРЕНАЛИН</h2>
+            <h4>ATV разходка</h4>
+        </div>
+
+        <div class="icons">
+            <a href="#events1"><i class="bi bi-list-nested"></i></a>
+            <a href="#gallery1"><i class="bi bi-images"></i></a>
+            <a href="#testimonials"><i class="bi bi-chat-left-quote"></i></a>
+        </div>
+    </div>
+    <section>
+        <h1 class="heading">СЪБИТИЯ</h1>
+        <div class="events" id="events1">
+
+            <div class="card">
+                <div class="face front">
+                    <img src="~/photos/atv1.jfif" class="" alt="" />
+                    <h2>АТВ около В.Търново</h2>
+                </div>
+                <div class="face back">
+                    <h2>АТВ около В.Търново</h2>
+                    <p>АТВ разходка около Арбанаси, маршрути по Търновските хълмове с гледки и забележителности.</p>
+                    <div class="details">
+                        <a href="#">Виж повече</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="~/photos/atv2.jfif" class="" alt="" />
+                    <h2>Офроуд с бъги около В.Търново</h2>
+                </div>
+                <div class="face back">
+                    <h2>Офроуд с бъги около В.Търново</h2>
+                    <p>Офроуд приключение с бъгита до Арбанаси.</p>
+                    <div class="details"><a href="#">Виж повече</a></div>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="~/photos/atv3.jfif" class="" alt="" />
+                    <h2>Офроуд преход във Витоша</h2>
+                </div>
+                <div class="face back">
+                    <h2>Офроуд преход във Витоша</h2>
+                    <p>Преход с АТВ в непознати терени на Витоша.</p>
+                    <div class="details"><a href="#">Виж повече</a></div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="face front">
+                    <img src="~/photos/atv10.jfif" class="" alt="" />
+                    <h2>АТВ край Белоградчик</h2>
+                </div>
+                <div class="face back">
+                    <h2>АТВ край Белоградчик</h2>
+                    <p>АТВ разходка на Белоградчишките скали.</p>
+                    <div class="details">
+                        <a href="#">Виж повече</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="~/photos/atv4.jfif" class="" alt="" />
+                    <h2>Офроуд в Родопите</h2>
+                </div>
+
+                <div class="face back">
+                    <h2>Офроуд в Родопите</h2>
+                    <p>АТВ разходка в Родопите - Минерални Бани, Хасково.</p>
+                    <div class="details">
+                        <a href="#">Виж повече</a>
+                    </div>
+                </div>
+                <a></a>
+
+            </div>
+            <div class="card">
+                <div class="face front">
+                    <img src="~/photos/atv6.jfif" class="" alt="" />
+                    <h2>Офроуд край Добринище</h2>
+                </div>
+
+                <div class="face back">
+                    <h2>Офроуд край Добринище</h2>
+                    <p>Офроуд АТВ край Добринище.</p>
+                    <div class="details">
+                        <a href="#">Виж повече</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <section>
+
+        <div class="gallery" id="gallery1">
+            <h1 class="heading">СНИМКИ</h1>
+            <div class="g-content">
+                <a class="g-item" href=" ~ /photos/atv5.png" @*data-lightbox="models" data-title=""*@>
+                    <img src="~/photos/atv5.png" />
+                </a>
+                <a class="g-item" href="~/photos/atv3.jfif" data-lightbox="models" data-title="ATV до София"><img src="~/photos/atv3.jfif" /></a>
+                <a class="g-item" href="~/photos/atv8.jfif" data-lightbox="models" data-title="Офроуд до Боровец"><img src="~/photos/atv8.jfif" /></a>
+                <a class="g-item" href="~/photos/atv1.jfif" data-lightbox="models" data-title="Каране около В.Търново"><img src="~/photos/atv1.jfif" /></a>
+                <a class="g-item" href="~/photos/atv7.png" data-lightbox="models" data-title="Преход из Родопите"><img src="~/photos/atv7.png" /></a>
+                <a class="g-item" href="~/photos/atv9.jfif" data-lightbox="models" data-title="Преход до Добринище"><img src="~/photos/atv9.jfif" /></a>
+                <a class="g-item" href="~/photos/atv2.jfif" data-lightbox="models" data-title="Офроуд във В.Търново и околностите"><img src="~/photos/atv2.jfif" /></a>
+                <a class="g-item" href="~/photos/atv10.jfif" data-lightbox="models" data-title="Каране край Белоградчик"><img src="~/photos/atv10.jfif" /></a>
+
+            </div>
+
+            <div class="popup-img">
+                <div class="alert alert-success alert-dismissible">
+                    @* <span>&times;</span>*@
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <img src="~/photos/atv5.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+
+        <div class="" id="testimonials">
+            
+                <h1 class ="heading">ОТЗИВИ</h1>
+            <div class="test-box-container">
+                <div class="test-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="~/photos/woman3.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Мария Калиева</strong>
+                                <span>mariqKweb@yahoo.com</span>
+                            </div>
+                        </div>
+
+                        <div class="reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+            
+                    </div>
+
+                    <div class="user-comments">
+                        <p>Много яко, екипът също е много готин.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-box-container">
+                <div class="test-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="~/photos/man3.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Симеон Симеонов</strong>
+                                <span>s.simeonov@abv.bg</span>
+                            </div>
+                        </div>
+
+                        <div class="reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+            
+                    </div>
+
+                    <div class="user-comments">
+                        <p>Уникално преживяване и екипът са много отзивчиви и внимателни.
+                            Препоръчвам на всеки, който иска да изпита истински адреналин</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-box-container">
+                <div class="test-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="~/photos/man4.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Иван Кирилов</strong>
+                                <span>kirilov@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+            
+                    </div>
+
+                    <div class="user-comments">
+                        <p>Незабравимо преживяване. Бих повторил отново.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-box-container">
+                <div class="test-box">
+                    <div class="box-top">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="~/photos/woman4.jpg" />
+                            </div>
+                            <div class="name-user">
+                                <strong>Камелия Иванова</strong>
+                                <span>ivka123@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="reviews">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="user-comments">
+                        <p>Беше вълнуващо и екстремно. Препоръчвам!!!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @*<script type="module" src="/js/atv.js"></script>*@
+</body>

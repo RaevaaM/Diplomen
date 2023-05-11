@@ -206,7 +206,7 @@ span{
     -ms-transform: translate(-50%, -50%);
 }
 /*contacts*/
-    .contacts{
+   /* .contacts{
       position:relative;
         min-height:100vh;
         padding:50px 100px;
@@ -330,7 +330,7 @@ span{
         cursor:pointer;
         font-size:18px;
         padding:10px;
-    }
+    }*/
     footer {
         background-color: white;
         bottom: 0;

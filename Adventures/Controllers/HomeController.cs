@@ -47,6 +47,38 @@ namespace Adventures.Controllers
             return View();
         }
 
+        public IActionResult ATVpage()
+        {
+            return View();
+        }
+        public IActionResult BalloonPage()
+        {
+            return View();
+        }
+        public IActionResult BungeePage()
+        {
+            return View();
+        }
+        public IActionResult ClimbPage()
+        {
+            return View();
+        }
+        public IActionResult ParaPage()
+        {
+            return View();
+        }
+        public IActionResult RaftingPage()
+        {
+            return View();
+        }
+        public IActionResult SkydivePage()
+        {
+            return View();
+        }
+        public IActionResult SnowPage()
+        {
+            return View();
+        }
         //public async Task<IActionResult> Details(int? id)
         //{
         //    if (id == null)
@@ -68,29 +100,29 @@ namespace Adventures.Controllers
         //    return View(item);
         //}
 
-    //    [HttpPost]
-    //    [ValidateAntiForgeryToken]
-    //    public async Task<IActionResult> Create(
-    //[Bind("CreatedOn,Description,Name")] Item item)
-    //    {
-    //        try
-    //        {
-    //            if (ModelState.IsValid)
-    //            {
-    //                _context.Add(item);
-    //                await _context.SaveChangesAsync();
-    //                return RedirectToAction(nameof(Index));
-    //            }
-    //        }
-    //        catch (DbUpdateException /* ex */)
-    //        {
-    //            //Log the error (uncomment ex variable name and write a log.
-    //            ModelState.AddModelError("", "Unable to save changes. " +
-    //                "Try again, and if the problem persists " +
-    //                "see your system administrator.");
-    //        }
-    //        return View(item);
-    //    }
+        //    [HttpPost]
+        //    [ValidateAntiForgeryToken]
+        //    public async Task<IActionResult> Create(
+        //[Bind("CreatedOn,Description,Name")] Item item)
+        //    {
+        //        try
+        //        {
+        //            if (ModelState.IsValid)
+        //            {
+        //                _context.Add(item);
+        //                await _context.SaveChangesAsync();
+        //                return RedirectToAction(nameof(Index));
+        //            }
+        //        }
+        //        catch (DbUpdateException /* ex */)
+        //        {
+        //            //Log the error (uncomment ex variable name and write a log.
+        //            ModelState.AddModelError("", "Unable to save changes. " +
+        //                "Try again, and if the problem persists " +
+        //                "see your system administrator.");
+        //        }
+        //        return View(item);
+        //    }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
